@@ -55,6 +55,13 @@ specification. Include the component in the scope:
 Add a commit description when the one-line summary is not enough. If a branch gets messy,
 use `git rebase -i` to squash or reword before opening a PR.
 
+### Dependencies
+
+- Only declare dependencies in a module or app `package.json` that are actively
+  imported in `src/`.
+- Avoid adding unused or speculative packages. Before opening a PR that alters
+  dependencies, ensure every declared package has active references in the codebase.
+
 ### Pull requests
 
 - Keep PRs small and focused. Avoid bundling unrelated changes.
